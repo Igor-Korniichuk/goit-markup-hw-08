@@ -1,10 +1,121 @@
 .nav-menu {
   display: flex;
+
+  justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+  &__button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    &__button:hover,
+    &__button:focus {
+      color: $accent-color;
+    }
+  }
+
+  &__icon-close {
+    display: none;
+  }
+
+  &__button.is-open &__icon-close {
+    display: block;
+  }
+
+  &__button.is-open &__icon-menu {
+    display: none;
+  }
+}
+
+.menu-conteiner {
+  display: flex;
+  width: 100%;
+  // padding: 10px 15px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    padding: 48px 83px;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $white-color;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.navigation {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 302px;
+  }
+}
+
+.site-nav__link.site-nav__link--current {
+  @media screen and (max-width: 767px) {
+    color: $accent-color;
+  }
+}
+
+.head-social {
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 64px;
+
+    align-items: center;
+  }
+
+  &__item {
+    padding: 0 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
+  &__item:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  &__item:first-child {
+    padding-left: 0;
+  }
 }
 
 .site-nav {
   display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 
 .site-nav__item {
@@ -12,6 +123,11 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 0 0 32 0;
+    padding: 0;
   }
 }
 
@@ -29,6 +145,14 @@
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  @media screen and (max-width: 767px) {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18px;
+    letter-spacing: 0.02em;
+    color: $title-text-color;
+  }
+
   &link--current {
     color: $accent-color;
   }
@@ -43,6 +167,10 @@
     height: 4px;
     background-color: $accent-color;
     border-radius: 2px;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 
   &:hover,
