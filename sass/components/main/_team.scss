@@ -1,3 +1,20 @@
+@media screen and (max-width: $mobile) {
+  .person-item {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    padding-bottom: 24px;
+    text-align: center;
+
+    &__foto {
+      max-width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
 .our-team {
   background: #f5f4fa;
 }
@@ -9,8 +26,8 @@
   }
 
   &__item {
-    width: 270px;
-    margin-right: 30px;
+    // width: 270px;
+    // margin-right: 30px;
     background: $white-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -27,6 +44,8 @@
 }
 
 .person-item__title {
+  margin-top: 30px;
+  margin-bottom: 10px;
   color: $title-text-color;
   font-weight: 500;
   font-size: 16px;
@@ -35,6 +54,7 @@
 }
 
 .person-item__position {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
